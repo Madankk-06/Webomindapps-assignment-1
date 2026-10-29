@@ -32,7 +32,7 @@ export default function HomePage() {
     <main className="mx-auto max-w-6xl px-4 py-8">
       <header className="mb-6" suppressContentEditableWarning>
         <h1 className="text-3xl font-bold">Product Explorer</h1>
-        <p className="text-sm text-slate-500">
+        <p className="text-sm text-slate-500" suppressHydrationWarning>
           Last updated at {new Date().toLocaleTimeString()}
         </p>
       </header>

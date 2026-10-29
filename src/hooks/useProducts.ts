@@ -28,7 +28,7 @@ export function useProducts() {
         if (!cancelled) {
           setError("Something went wrong while loading products.");
         }
-      } finally {
+      } finally { 
         if (!cancelled) {
           setLoading(false);
         }
