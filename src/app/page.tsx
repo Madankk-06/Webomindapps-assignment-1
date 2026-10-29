@@ -18,13 +18,16 @@ export default function HomePage() {
     return ["all", ...Array.from(unique)];
   }, [products]);
 
-  const visibleProducts = products.filter((product) => {
-    if (category !== "all") {
-      return product.category === category;
-    }
-    return product.title.includes(search);
-  });
-
+  //Changes to improvise search in any case
+  let v_product = products;
+  if(category !== "all"){
+    v_product = v_product.filter((pr) => pr.category === category);
+  }
+  if(search.trim() !== ""){
+    const query = search.toLowerCase().trim();
+    v_product = v_product.filter((pr) => pr.title.toLowerCase().includes(query));
+  }
+  
   return (
     <main className="mx-auto max-w-6xl px-4 py-8">
       <header className="mb-6">
@@ -49,7 +52,7 @@ export default function HomePage() {
         Show a helpful error state to the user when the request fails.
       */}
 
-      <ProductGrid products={visibleProducts} onSelect={setSelected} />
+      <ProductGrid products={v_product} onSelect={setSelected} />
 
       <ProductModal product={selected} onClose={() => setSelected(null)} />
     </main>
