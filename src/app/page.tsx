@@ -18,7 +18,7 @@ export default function HomePage() {
     return ["all", ...Array.from(unique)];
   }, [products]);
 
-  //Changes to improvise search in any case
+  //Changed to improvise search in any case
   let v_product = products;
   if(category !== "all"){
     v_product = v_product.filter((pr) => pr.category === category);
@@ -27,10 +27,10 @@ export default function HomePage() {
     const query = search.toLowerCase().trim();
     v_product = v_product.filter((pr) => pr.title.toLowerCase().includes(query));
   }
-  
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-8">
-      <header className="mb-6">
+      <header className="mb-6" suppressContentEditableWarning>
         <h1 className="text-3xl font-bold">Product Explorer</h1>
         <p className="text-sm text-slate-500">
           Last updated at {new Date().toLocaleTimeString()}
