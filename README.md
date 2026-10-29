@@ -30,7 +30,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🐛 Bug Fixes Completed
+## Bug Fixes Completed
 
 1. **Resolved Infinite Fetch Loop (`src/hooks/useProducts.ts`)**
    - Changed the `useEffect` dependency array from `[products]` to `[]` so the catalogue is fetched only once on initial mount.
@@ -50,7 +50,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## ✨ Features Implemented
+## Features Implemented
 
 1. **Error State Handling (`src/app/page.tsx`)**
    - Added a clear, user-friendly error UI banner when product data fetching fails, and gracefully hides the grid during loading and error states.
