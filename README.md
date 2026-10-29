@@ -1,4 +1,5 @@
 # Product Explorer
+Webomindapps Assignment-1 for the interview
 
 A responsive product browsing web application built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**, powered by the FakeStore public API.
 
