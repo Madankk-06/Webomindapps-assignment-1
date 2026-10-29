@@ -52,11 +52,10 @@ export default function HomePage() {
             <h3 className="text-base font-semibold">PRODUCT LOADING FAILED</h3>
             <p className="mt-1">Product datas cannot be Fetched</p>
         </div>
-      )
-      }
+      )}
+      
       {!loading && !error &&(<ProductGrid products={v_product} onSelect={setSelected} /> )}
       
-
       <ProductModal product={selected} onClose={() => setSelected(null)} />
     </main>
   );
